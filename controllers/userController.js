@@ -11,7 +11,7 @@ module.exports.login = async (req, res, next) => {
     if (!user)
     return res.json({ msg: "Incorrect Username or Password", status: false });
     // we are comparing the password entered by user in login page and hashed password stored in db 
-    // compare is bcrpyt inBuiltfunc  
+    // compare is bcrpycst inBuiltfunc  
     const isPasswordValid = await bcrypt.compare(password, user.password);
     // if not valid password 
     if (!isPasswordValid)
