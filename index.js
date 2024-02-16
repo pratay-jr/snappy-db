@@ -10,6 +10,7 @@ require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
+mongoose.set("strictQuery", false);
 
 const connectDatabase = async () => {
   mongoose
